@@ -1,9 +1,8 @@
 class Account:
 
-    def __init__(self,accountNumber,accountHolderName,rateOfinterest,currentBalance):
+    def __init__(self,accountNumber,accountHolderName,currentBalance):
         self.accountNumber = accountNumber
         self.accountHolderName = accountHolderName
-        self.rateOfinterest = rateOfinterest
         self.currentBalance = currentBalance
 
     def getAccountNumber(self):
@@ -11,9 +10,6 @@ class Account:
 
     def getAccountHolderName(self):
         return self.accountHolderName
-    
-    def getRateOfInterest(self):
-        return self.rateOfinterest
     
     def getCurrentBalance(self):
         return self.currentBalance
