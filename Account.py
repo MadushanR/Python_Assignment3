@@ -21,7 +21,7 @@ class Account:
     def deposit(self,amount):
         self.currentBalance = self.currentBalance + amount
 
-    def deposit(self,amount):
+    def withdraw(self,amount):
         self.currentBalance = self.currentBalance - amount
 
     
