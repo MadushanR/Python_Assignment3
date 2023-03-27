@@ -9,4 +9,8 @@ class SavingsAccount(Account.Account):
 
 
     def withdraw(self,amount):
-        super().withdraw(self,amount)
+        if (self.currentBalance - (self.minimumBalance +amount))>= 0:
+            Account.Account.withdraw(self,amount)
+            print("Transaction successful and current balance is : ",self.currentBalance)
+        else:
+            print("You cannot process the request as it exceeds the minimum balance, current balance is :",self.currentBalance, " and the minimum balance required is ",self.minimumBalance)

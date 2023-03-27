@@ -7,5 +7,8 @@ class ChequingAccount(Account.Account):
         self.accountType = "Chequing Account"
 
     def withdraw(self,amount):
-        self.currentBalance = self.currentBalance + self.overdraftAllowed
-        super().withdraw(self,amount)
+        if ((self.currentBalance + self.overdraftAllowed) - amount)>= 0:
+            Account.Account.withdraw(self,amount)
+            print("Transaction successful and current balance is : ",self.currentBalance)
+        else:
+            print("You cannot process the request as it exceeds the overdraft, current balance is :",self.currentBalance, " and the overdraft is ",self.overdraftAllowed)  

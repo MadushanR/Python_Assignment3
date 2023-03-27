@@ -1,15 +1,15 @@
 import Bank
 
-Bank.Bank.generateAccounts()
-Bank.Bank.display()
+class Program(Bank.Bank):
 
+    Bank.Bank.generateAccounts()
 
 def showAccountMenu():
     print("\nEnter 1 to check balance ")
     print("Enter 2 to deposit ")
     print("Enter 3 to withdraw ")
     print("Enter 4 to go back to main menu ")
-    print("Enter 5 to all accounts ")
+    print("Enter 5 to see all accounts ")
     choice = int(input("\nEnter the choice "))
     if choice == 1 :
         accountNumber = int(input("Enter account number "))
@@ -24,7 +24,7 @@ def showAccountMenu():
         Bank.Bank.withdraw(accountNumber)
         showAccountMenu()
     elif choice == 4:
-        run()
+        showMainMenu()
     elif choice == 5:
         Bank.Bank.display()
         showAccountMenu()
@@ -33,14 +33,14 @@ def showAccountMenu():
         showAccountMenu()
 
 
-def run():
+def showMainMenu():
     print("\nEnter 1 to open an account ")
     print("Enter 2 to select an account ")
     print("Enter 3 to exit \n")
     choice = int(input("Enter the choice "))
     if choice == 1:
         Bank.Bank.openAccounts()
-        run()
+        showMainMenu()
     elif choice == 2:
         showAccountMenu()
     elif choice == 3:
@@ -48,9 +48,9 @@ def run():
     else:
         print("\nEnter a valid choice ")
         choice = int(input("Enter the choice "))
-        run()
+        showMainMenu()
 
-run()
+showMainMenu()
 
 
     
