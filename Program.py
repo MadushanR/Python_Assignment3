@@ -2,7 +2,7 @@ import Bank
 
 class Program(Bank.Bank):
 
-    Bank.Bank.generateAccounts()
+        Bank.Bank.generateAccounts()
 
 def showAccountMenu():
     print("\nEnter 1 to check balance ")
@@ -13,20 +13,20 @@ def showAccountMenu():
     choice = int(input("\nEnter the choice "))
     if choice == 1 :
         accountNumber = int(input("Enter account number "))
-        Bank.Bank.searchAccount(accountNumber)
+        Program.searchAccount(accountNumber)
         showAccountMenu()
     elif choice == 2:
         accountNumber = int(input("Enter account number "))
-        Bank.Bank.deposit(accountNumber)
+        Program.deposit(accountNumber)
         showAccountMenu()
     elif choice == 3:
         accountNumber = int(input("Enter account number "))
-        Bank.Bank.withdraw(accountNumber)
+        Program.withdraw(accountNumber)
         showAccountMenu()
     elif choice == 4:
         showMainMenu()
     elif choice == 5:
-        Bank.Bank.display()
+        Program.display()
         showAccountMenu()
     else:
         print("\nEnter a valid choice")
@@ -39,7 +39,7 @@ def showMainMenu():
     print("Enter 3 to exit \n")
     choice = int(input("Enter the choice "))
     if choice == 1:
-        Bank.Bank.openAccounts()
+        Program.openAccounts()
         showMainMenu()
     elif choice == 2:
         showAccountMenu()
