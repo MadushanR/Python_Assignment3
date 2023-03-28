@@ -1,5 +1,5 @@
 import Account,random,SavingsAccount,ChequingAccount
-class Bank(Account.Account):
+class Bank():
     global accountList 
     accountList = []
 
@@ -44,7 +44,7 @@ class Bank(Account.Account):
             print("\nAccount created ")
         else:
              print("\nEnter a valid choice\n")
-             Bank.openAccounts()
+             Account.Account.openAccounts()
         Bank.display()
 
     def display():
