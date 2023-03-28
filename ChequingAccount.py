@@ -2,7 +2,7 @@ import Account
 class ChequingAccount(Account.Account):
 
     def __init__(self, accountNumber, accountHolderName, currentBalance, overdraftAllowed):
-        super().__init__(accountNumber, accountHolderName, currentBalance)
+        super().__init__(accountNumber, accountHolderName, currentBalance+overdraftAllowed)
         self.overdraftAllowed = overdraftAllowed
         self.accountType = "Chequing Account"
 
