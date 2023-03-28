@@ -5,7 +5,7 @@ class Bank():
 
 
     def __init__(self,accountNumber,accountHolderName,currentBalance):
-        self.account = Account(accountNumber,accountHolderName,currentBalance)
+        self.account = Account.Account(accountNumber,accountHolderName,currentBalance)
 
     def generateAccounts():
         n = 0
@@ -65,8 +65,9 @@ class Bank():
         found = False
         for i in accountList:
             if i.accountNumber == accountNumber :
+                account = Bank(i.accountNumber,i.accountHolderName,i.currentBalance)
                 amount = float(input("Enter the amount "))
-                Bank.deposit(i,amount)
+                Account.Account.deposit(i,amount)
                 print("Transaction successful and current balance is : ",i.currentBalance)
                 found = True
         if found == False:
