@@ -55,7 +55,7 @@ A simple command-line banking application built in Python that lets users manage
 1. Run the main application:
 
    ```bash
-   python bank_app.py
+   python program.py
    ```
 2. Follow on-screen prompts to:
 
@@ -68,8 +68,8 @@ A simple command-line banking application built in Python that lets users manage
 ## Project Structure
 
 ```plaintext
-basic-python-bank-app/
-├── bank_app.py         # Main program with CLI menu
+Python_Assignment3/
+├── program.py         # Main program with CLI menu
 ├── accounts.py         # Account classes (Savings, Chequing)
 ├── transactions.py     # Transaction and transfer logic
 ├── data/               # (Optional) Persistent data files
